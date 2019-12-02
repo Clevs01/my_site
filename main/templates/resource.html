@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block titre %}
+Resources
+{% endblock %}
+{% block content %}
+
+<div class="container first">
+<h1>My learning resources</h1>
+<p class="lead">
+    It took passion and persistence for me to gain the knowledge that I have in regards to web development. I had to try many times and fail. I felt discouraged sometimes.
+</p>
+<p>
+    Because I felt discouraged sometimes and even tried to quit, I will like to give a special <br>
+    <span class="text-success display-3">THANK YOU</span><br> to everyone on <a href="https://wwww.facebook.com" target="_blank" class="help">Facebook</a>
+    and <a href="https://wwww.twitter.com" target="_blank" class="help">Twitter</a> who assisted and is still assisting me in one way or the other. You played the greatest part in my learning curve. I asked dumb questions but you did not ignore me. You gave me guides as well as referred me to study masterials that helped me all the way. I know that you're still willing to offer me more support. May the Lord Almighty richly bless you.
+</p>
+<p>
+    To the <q>Content Creators</q>, I can't end this without thanking you for the
+    <pre class="text-warning">Time, Finance, Resources and the Commitment</pre>  that you put in place to create these learning material and offer them to me. Only God Almighty can pay you back but if I have the means, I will pay you back in my own way.
+</p>
+</div>
+<hr>
+<div class="container">
+<h2>Here are some of the Resources I'm using.</h2>
+<p class="lead">
+    Below are some of the sites and courses I'm using to learn. The list doesn't give any special rating to the site or course. <br>
+<p>I can't list all of them here. <span class="warn">Sorry Huh!!</span> &nbsp; &nbsp; &nbsp; If the list is too long, its obvious. This is due to the difficulties I face with my studies. Studying alone, I have to consume the same infomation from as many sources as posible just to pick one or two things.
+    Since so many people on the <span class="warn">Social Network</span> have been helping me all the way, some of the resource materials were referred to by them.
+    <br>
+    <span class="warn">Note:</span> The order in which these resources are arranged do not make one more superior than the other.
+</p>
+<hr>
+<ol>
+{% for item in context %}
+  <li>
+    <h3>{{ item.provider }}</h3>
+    <div class="pic">
+            <img src="{{ item.img.url |safe }}" alt=" {{ item.provider }} logo" width="120">
+    </div>
+<div class="des">
+  {{ item.description | safe}}
+</div>
+    <p>
+                <span class="url">Web address : </span>
+                <a href=" {{ item.course_url }}" target="_blank">{{ item.course_url }}</a>
+        </p>
+  </li>
+  <div class="mb-5"></div>
+{% endfor %}
+</ol>
+{% endblock %}

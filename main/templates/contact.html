@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+{% block titre %}
+Contact Me
+{% endblock %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-1">
+        {{ form.title|as_crispy_field }}
+      </div>
+      <div class="col-md-6">
+        {{ form.name|as_crispy_field }}
+      </div>
+      <div class="col-md-5">
+        {{ form.email|as_crispy_field }}
+      </div>
+      <div class="col-md-5">
+        {{ form.country|as_crispy_field }}
+      </div>
+      <div class="col-md-5">
+        {{ form.address|as_crispy_field }}
+      </div>
+      <div class="col-md-2">
+        {{ form.phone|as_crispy_field }}
+      </div>
+      <div class="col-offset-md-3">
+      {{ form.message|as_crispy_field }}
+    </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Send message</button>
+  </form>
+{% endblock %}

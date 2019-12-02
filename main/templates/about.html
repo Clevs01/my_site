@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block titre %}
+About Clevis
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    {% for ele in abouts %}
+    <div class="jumbotron text-center">
+      <p class="lead">
+        <img src="{{ ele.picture.url }}" class="img rounded-circle mx-auto d-block" width="300" alt=" {{ele.name }}">
+      </p>
+        <h1 class=" text-dark">
+          Who is {{ ele.name }}
+        </h1>
+        <p>
+      Hello and welcome. In thi page, I'll give you a bit of information about myself.
+        You are highly welcomed.
+      </p>
+    </div>
+    <div class="col-md-7">
+      {{ ele.description |safe}}
+    </div>
+    <div class="col-md-4 text-white bg-dark ml-5">
+      <div class="col-12">
+      {{ ele.bio |safe }}
+      </div>
+      <div class="col-12">
+        <h3 class="text-info bg-gray">
+          My hobbies
+        </h3>
+        {{ ele.hobbies |safe }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<hr class="my-5">
+
+
+{% endblock %}

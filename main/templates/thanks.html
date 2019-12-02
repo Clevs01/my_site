@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script type="text/javascript">
+    function Redirect()
+    {
+        window.location="{% url 'site-home' %}";
+    }
+    document.write("<p class='text-success display-5'>You will be redirected to a new page in 5 seconds</p>");
+    setTimeout('Redirect()', 5000);
+</script>
+  <h1 class="display-2 text-warning">
+    Hello {{ form.name }} , Your message has been received.
+  </h1>
+{% endblock %}

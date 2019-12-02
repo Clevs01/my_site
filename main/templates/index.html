@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% block titre %}
+My Porfolio
+{% endblock %}
+<div class="container-fluid bg-dark">
+  <div class="jumbotron">
+    <h1 class="text-info font-weight-bolder">
+      Welcome here where I'll tell you a bit about myself.
+    </h1>
+    <p class="lead">
+      Hello everyone, here are a few of my projects.
+    </p>
+  </div>
+  <div class="row mt-3 mb-6 bg-dark text-danger">
+    <div class="col-md-5 ml-auto">
+      The Pixel Art maker is a small program written in HTML, CSS, and JavaScript which you can use to do paintings. It paints good arts but you can't return it. It need a storage system that it can store and retrieve a painting or you take a screenshot.
+    </div>
+    <div class="col-md-6 mr-auto bg-info text-dark">
+      The website is a demo website I designed in the ocation of the ICT and Entrepreneurship program organized by CODEMO, African Institute of Technology (IAI-Cameroun), the African Union in collaboration with the Cameroon ministry for Secondary education and ministry of vocational training.
+    </div>
+  </div>
+  <hr>
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide text-center mx-auto" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active">
+        <a href="https://clevs01.github.io" target="_blank">
+        <img src="{% static "img/p2.png" %}" width="2000" height="400" alt="">
+        <div class="carousel-caption d-none d-md-block text-primary">
+          <h3>Pixel Art Maker</h3>
+          <p>This is a description for the first slide.</p>
+        </div>
+        </a>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item">
+        <a href="https://clevs01.github.io/codemo" target="_blank">
+        <img src="{% static "img/p1.png" %}" width="2000" height="400" alt="">
+        <div class="carousel-caption d-none d-md-block text-primary">
+          <h3>Second Slide</h3>
+          <p>This is a description for the second slide.</p>
+        </div>
+        </a>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item">
+        <a href="https://clevs01.github.io" target="_blank">
+        <img src="{% static "img/loveit.png" %}" width="2000" height="400" alt="">
+        <div class="carousel-caption d-none d-md-block text-primary">
+          <h3 class="float-right mr-3">A painting from <br> pixel art maker</h3>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://clevs01.github.io" target="_blank">
+        <img src="{% static "img/p4.png" width="2000" height="400" %}" alt="">
+        <div class="carousel-caption d-none d-md-block text-primary">
+          <h3 class="text-danger float-right">Third Slide</h3>
+          <p>This is a description for the third slide.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</header>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<h2>No exercises for now. Come back after 48 hours</h2>
+Here, I will try to solve some of your exercises and assignment most especially the ones in the Python programming language.
+<script type="text/javascript">
+    function Redirect()
+    {
+        window.location="{% url 'tutorials' %}";
+    }
+    document.write("<p class='text-success display-5'>You will be redirected to a the tutorials homepage in 5 seconds.</p>");
+    setTimeout('Redirect()', 5000);
+</script>
+</div>
+{% endblock %}
